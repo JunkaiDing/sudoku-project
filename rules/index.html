@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Master - Rules</title>
+    <link rel="stylesheet" href="../common.css">
+    <style>
+        .rules-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-card);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .rules-list {
+            counter-reset: rule-counter;
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .rules-list li {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .rules-list li::before {
+            counter-increment: rule-counter;
+            content: counter(rule-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 2rem;
+            font-weight: bold;
+        }
+
+        .credits {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+
+        .credits-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .nyt-link {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Sudoku Master</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../selection/index.html">Play</a></li>
+            <li><a href="index.html" class="active">Rules</a></li>
+            <li><a href="../highscores/index.html">Scores</a></li>
+            <li><a href="../login/index.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="rules-content">
+            <h1 class="text-center">How to Play</h1>
+
+            <p>Sudoku is a logic-based, combinatorial number-placement puzzle. The objective is to fill a grid with
+                digits so that each column, each row, and each of the subgrids that compose the grid contain all of the
+                digits from 1 to 9 (or 1 to 6 for easy mode).</p>
+
+            <ol class="rules-list">
+                <li>
+                    <strong>Grid Logic:</strong> The game is played on a grid (9x9 or 6x6). You must fill every empty
+                    cell with a number.
+                </li>
+                <li>
+                    <strong>Row Rule:</strong> Each row must contain the numbers 1-9 (or 1-6) exactly once. No repeats
+                    allowed!
+                </li>
+                <li>
+                    <strong>Column Rule:</strong> Each column must contain the numbers 1-9 (or 1-6) exactly once. No
+                    repeats allowed!
+                </li>
+                <li>
+                    <strong>Subgrid Rule:</strong> Each subgrid (3x3 for hard, 2x3 for easy) must contain the numbers
+                    1-9 (or 1-6) exactly once.
+                </li>
+                <li>
+                    <strong>No Guessing:</strong> Sudoku is a game of logic and reasoning. You shouldn't have to guess;
+                    there is always a logical next step.
+                </li>
+            </ol>
+            <div class="credits">
+                <h3>Credits</h3>
+                <p>Designed and Developed by Xihe Mu</p>
+                <div class="credits-links">
+                    <a href="mailto:mu.xihe@northeastern.edu">Email</a>
+                    <a href="https://github.com/JunkaiDing/sudoku-project" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/xihe-mu-83640723b/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

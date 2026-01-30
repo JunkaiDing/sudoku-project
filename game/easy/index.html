@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Master - Easy Game</title>
+    <link rel="stylesheet" href="../../common.css">
+    <style>
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px; /* Smaller max width for 6x6 */
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 1rem;
+            align-items: center;
+        }
+
+        .timer {
+            font-size: 1.5rem;
+            font-family: monospace;
+            background: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .sudoku-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            border: 2px solid #333;
+            background: #fff;
+            width: 100%;
+            aspect-ratio: 1;
+            margin-bottom: 2rem;
+        }
+
+        .cell {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #ccc;
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: var(--font-main);
+            color: var(--primary-color);
+            padding: 0;
+            outline: none;
+            -moz-appearance: textfield;
+        }
+
+        .cell::-webkit-outer-spin-button,
+        .cell::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .cell:focus {
+            background-color: #e6f7ff;
+        }
+
+        .cell.fixed {
+            background-color: #f4f4f4;
+            color: #333;
+            font-weight: bold;
+            cursor: default;
+        }
+
+        .border-right {
+            border-right: 2px solid #333;
+        }
+
+        .border-bottom {
+            border-bottom: 2px solid #333;
+        }
+
+        .game-controls {
+            display: flex;
+            gap: 1rem;
+        }
+
+        @media (max-width: 500px) {
+            .cell {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Sudoku Master</div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../selection/index.html" class="active">Play</a></li>
+            <li><a href="../../rules/index.html">Rules</a></li>
+            <li><a href="../../highscores/index.html">Scores</a></li>
+            <li><a href="../../login/index.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="game-container">
+            <div class="game-header">
+                <h2>Easy Level</h2>
+                <div class="timer">02:15</div>
+            </div>
+
+            <div class="sudoku-grid">
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell border-right"  >
+                <input type="number" min="1" max="6" class="cell fixed" value="4" readonly>
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell border-bottom"  >
+                <input type="number" min="1" max="6" class="cell border-bottom fixed" value="2" readonly>
+                <input type="number" min="1" max="6" class="cell border-right border-bottom"  >
+                <input type="number" min="1" max="6" class="cell border-bottom"  >
+                <input type="number" min="1" max="6" class="cell border-bottom"  >
+                <input type="number" min="1" max="6" class="cell border-bottom fixed" value="6" readonly>
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell border-right"  >
+                <input type="number" min="1" max="6" class="cell fixed" value="4" readonly>
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell border-bottom"  >
+                <input type="number" min="1" max="6" class="cell border-bottom fixed" value="2" readonly>
+                <input type="number" min="1" max="6" class="cell border-right border-bottom"  >
+                <input type="number" min="1" max="6" class="cell border-bottom"  >
+                <input type="number" min="1" max="6" class="cell border-bottom"  >
+                <input type="number" min="1" max="6" class="cell border-bottom fixed" value="6" readonly>
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell border-right"  >
+                <input type="number" min="1" max="6" class="cell fixed" value="4" readonly>
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell fixed" value="2" readonly>
+                <input type="number" min="1" max="6" class="cell border-right"  >
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell"  >
+                <input type="number" min="1" max="6" class="cell fixed" value="6" readonly>
+            </div>
+
+            <div class="game-controls">
+                <a href="../../selection/index.html" class="btn btn-secondary">Quit</a>
+                <button class="btn">New Game</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

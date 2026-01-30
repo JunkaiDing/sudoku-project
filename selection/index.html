@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Master - Select Game</title>
+    <link rel="stylesheet" href="../common.css">
+    <style>
+        .selection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .game-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .game-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .game-author {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .difficulty-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .badge-easy {
+            background-color: #e6fffa;
+            color: var(--success-color);
+            border: 1px solid var(--success-color);
+        }
+
+        .badge-hard {
+            background-color: #fff5f5;
+            color: var(--danger-color);
+            border: 1px solid var(--danger-color);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Sudoku Master</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html" class="active">Play</a></li>
+            <li><a href="../rules/index.html">Rules</a></li>
+            <li><a href="../highscores/index.html">Scores</a></li>
+            <li><a href="../login/index.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="text-center">Select a Game</h1>
+        <p class="text-center">Choose a puzzle to solve from our collection.</p>
+
+        <div class="selection-grid">
+            <!-- Easy Games -->
+            <div class="card game-card">
+                <div>
+                    <span class="difficulty-badge badge-easy">Easy (6x6)</span>
+                    <h3>Easy Level</h3>
+                    <p class="game-author">By Xihe Mu</p>
+                    <p>A gentle introduction to Sudoku logic. Perfect for beginners.</p>
+                </div>
+                <a href="../game/easy/index.html" class="btn mt-1">Play Now</a>
+            </div>
+
+
+
+            <div class="card game-card">
+                <div>
+                    <span class="difficulty-badge badge-hard">Hard (9x9)</span>
+                    <h3>Hard Level</h3>
+                    <p class="game-author">By Xihe Mu</p>
+                    <p>A complex web of numbers that needs untangling.</p>
+                </div>
+                <a href="../game/hard/index.html" class="btn mt-1">Play Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

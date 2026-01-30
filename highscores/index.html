@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Master - High Scores</title>
+    <link rel="stylesheet" href="../common.css">
+    <style>
+        .scores-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-card);
+            max-width: 800px;
+            margin: 0 auto;
+            overflow-x: auto;
+            /* For mobile table scrolling */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+
+        .rank-medal {
+            font-size: 1.2rem;
+        }
+
+        .avatar {
+            width: 30px;
+            height: 30px;
+            background-color: #ddd;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .scores-container {
+                padding: 1rem;
+            }
+
+            th,
+            td {
+                padding: 0.5rem;
+                font-size: 0.8rem;
+            }
+
+            th:nth-child(3),
+            td:nth-child(3) {
+                display: none;
+                /* Hide difficulty column on very small screens if needed, or just shrink padding */
+            }
+
+            .avatar {
+                margin-right: 0.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Sudoku Master</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../selection/index.html">Play</a></li>
+            <li><a href="../rules/index.html">Rules</a></li>
+            <li><a href="index.html" class="active">Scores</a></li>
+            <li><a href="../login/index.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="text-center mb-2">Hall of Fame</h1>
+        <div class="scores-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%">Rank</th>
+                        <th style="width: 50%">Player</th>
+                        <th style="width: 20%">Difficulty</th>
+                        <th style="width: 20%">Solved</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="rank-medal">🥇</span> 1</td>
+                        <td><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23FFD700'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='white'>♔</text></svg>"
+                                alt="King" class="avatar" style="background: transparent;">PuzzleKing99</td>
+                        <td>Hard</td>
+                        <td>1,245</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-medal">🥈</span> 2</td>
+                        <td>
+                            <div class="avatar" style="background: #C0C0C0"></div>LogicMaster
+                        </td>
+                        <td>Hard</td>
+                        <td>982</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-medal">🥉</span> 3</td>
+                        <td>
+                            <div class="avatar" style="background: #CD7F32"></div>SudokuPro
+                        </td>
+                        <td>Medium</td>
+                        <td>876</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>
+                            <div class="avatar"></div>GridWalker
+                        </td>
+                        <td>Hard</td>
+                        <td>754</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>
+                            <div class="avatar"></div>NumberCruncher
+                        </td>
+                        <td>Easy</td>
+                        <td>643</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>
+                            <div class="avatar"></div>BrainTeaser
+                        </td>
+                        <td>Hard</td>
+                        <td>521</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>
+                            <div class="avatar"></div>DailySolver
+                        </td>
+                        <td>Medium</td>
+                        <td>489</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>
+                            <div class="avatar"></div>CasualGamer
+                        </td>
+                        <td>Easy</td>
+                        <td>312</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
