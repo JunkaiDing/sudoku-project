@@ -1,0 +1,3 @@
+The most challenging part was ensuring the Sudoku puzzles were generated correctly followingrules. Our manual approach required constantly refreshing the page to visually verify that each puzzle was valid, which takes a lot of time. 
+I found HTML and CSS relatively straightforward since the structure and styling are intuitive once you understand the box model and CSS Grid.This assignment took us approximately 4-5 hours to complete.
+I moved the navigation bar to the bottom of the screen on mobile devices since it's easier to reach with thumb. The Sudoku grid uses aspect-ratio: 1 to maintain a perfect square on all screen sizes, and I reduced cell font sizes on mobile to prevent overcrowding. Container padding was als reduced on small screens.
