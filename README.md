@@ -28,7 +28,7 @@ The Sudoku grid uses `aspect-ratio: 1` to maintain a perfect square on all scree
 3.  **Note Taking Mode:** A feature allowing players to annotate cells with small candidate numbers, just like what on the example website.
 
 ### How many hours did you spend on this assignment?
-This assignment took approximately 4-5 hours to complete.
+This assignment took approximately 12 hours (3 of us in total ) to complete.
 
 ### (Optional) Assumptions
 I assumed that "Easy" difficulty implied a smaller grid size (6x6) to make it more accessible for beginners, while "Hard" would be the standard 9x9 size.
