@@ -5,7 +5,7 @@
 *   **Github Pages:** https://junkaiding.github.io/sudoku-project/
 *   **Collaborators:** Xihe Mu，Junkai Ding,  Chengyu Liang
 *   **Github Repo:** https://github.com/JunkaiDing/sudoku-project
-*   **Video Walkthrough:** 
+*   **Video Walkthrough:** https://youtu.be/4U8iNQYsOWY
 
 ---
 
