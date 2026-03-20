@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import PageLayout from "./components/PageLayout";
 import GamePage from "./pages/GamePage";
 import GamesPage from "./pages/GamesPage";
@@ -10,7 +10,7 @@ import ScoresPage from "./pages/ScoresPage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <PageLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -24,7 +24,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </PageLayout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
