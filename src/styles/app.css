@@ -3,6 +3,22 @@
   min-height: 100vh;
 }
 
+.login-prompt {
+  text-align: center;
+  padding: 0.6rem 1.2rem;
+  background: rgba(86, 204, 242, 0.12);
+  border: 1px solid var(--primary-color, #2f80ed);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--text-color, #333);
+}
+
+.login-prompt a {
+  color: var(--primary-color, #2f80ed);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 .page-shell {
   display: flex;
   flex-direction: column;

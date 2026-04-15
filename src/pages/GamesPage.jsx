@@ -52,7 +52,7 @@ function GamesPage() {
         Create a new game or select an existing one to play.
       </p>
 
-      {isLoggedIn && (
+      {isLoggedIn ? (
         <div className="create-buttons">
           <button
             className="btn"
@@ -71,6 +71,10 @@ function GamesPage() {
           <Link to="/custom" className="btn btn-secondary">
             Create Custom Game
           </Link>
+        </div>
+      ) : (
+        <div className="login-prompt">
+          <span>Please <a href="/login">log in</a> or <a href="/register">register</a> to create and play games.</span>
         </div>
       )}
 

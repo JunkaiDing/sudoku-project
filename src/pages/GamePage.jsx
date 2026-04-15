@@ -135,6 +135,12 @@ function GamePage() {
         title={config.title || `${config.mode?.charAt(0).toUpperCase()}${config.mode?.slice(1)} Level`}
       />
 
+      {!isLoggedIn && (
+        <div className="login-prompt">
+          <span>Please <a href="/login">log in</a> to play. You can view the puzzle but cannot interact with it.</span>
+        </div>
+      )}
+
       <div className="game-board-card">
         <SudokuBoard
           board={board}
