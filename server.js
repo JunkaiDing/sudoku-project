@@ -11,8 +11,8 @@ import highscoreRoutes from "./backend/routes/highscore.js";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const app = express();
-const PORT = 8000;
-const MONGODB_URL = "mongodb://localhost:27017/sudoku";
+const PORT = process.env.PORT || 8000;
+const MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost:27017/sudoku";
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
